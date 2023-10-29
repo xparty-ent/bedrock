@@ -115,7 +115,7 @@ jobs:
           echo "DB_NAME='${{ secrets.DB_NAME }}'" >> .env
           echo "DB_PASSWORD='${{ secrets.DB_PASSWORD }}'" >> .env
           echo "DB_USER='${{ secrets.DB_USER }}'" >> .env
-          echo "ACORN_ENABLE_EXPIRIMENTAL_ROUTER='${{ vars.ACORN_ENABLE_EXPIRIMENTAL_ROUTER }}'" >> .env
+          echo "ACORN_ENABLE_EXPIRIMENTAL_ROUTER='true'" >> .env
           echo "DB_PREFIX='${{ vars.DB_PREFIX }}'" >> .env
           echo "WP_ENV='${{ vars.WP_ENV }}'" >> .env
           echo "WP_HOME='${{ vars.WP_HOME }}'" >> .env
