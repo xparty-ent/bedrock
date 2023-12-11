@@ -125,7 +125,7 @@ jobs:
 
       - name: Link uploads folder
         run: |
-          rm web/app/uploads/
+          rm -rf web/app/uploads/
           ln -s ${{ vars.WP_UPLOADS_FOLDER }} $(pwd)/web/app/uploads/
 
       - name: Sync permissions
