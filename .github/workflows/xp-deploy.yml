@@ -134,7 +134,7 @@ jobs:
           sudo chown :www-data -R .
 
       - name: Clear CF cache
-        uses: jakejarvis/cloudflare-purge-action@v0.3.0
-        env:
-          CLOUDFLARE_ZONE: ${{ secrets.CLOUDFLARE_ZONE }}
-          CLOUDFLARE_TOKEN: ${{ vars.CLOUDFLARE_TOKEN }}
+        uses: nathanvaughn/actions-cloudflare-purge@master
+        with:
+          cf_zone: ${{ vars.CLOUDFLARE_ZONE }}
+          cf_auth: ${{ secrets.CLOUDFLARE_TOKEN }}
