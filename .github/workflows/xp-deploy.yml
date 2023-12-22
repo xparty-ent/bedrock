@@ -129,6 +129,23 @@ jobs:
           rm -rf web/app/uploads/
           ln -s ${{ vars.WP_UPLOADS_FOLDER }} $(pwd)/web/app/uploads
 
+      - name: Clear Bedrock cache
+        run: |
+          wp acorn cache:clear
+          wp acorn optimize:clear
+          wp acorn view:clear
+          wp acorn route:clear
+          wp acorn config:clear
+
+      - name: Rebuild Bedrock cache
+        run: |
+          wp acorn package:discover
+          wp acorn view:cache
+          wp acorn route:cache
+          wp acorn config:cache
+          wp acorn optimize
+
+
       - name: Sync permissions
         run: |
           sudo chmod 774 -R .
