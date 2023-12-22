@@ -131,19 +131,23 @@ jobs:
 
       - name: Clear Bedrock cache
         run: |
+          cd web/
           wp acorn cache:clear
           wp acorn optimize:clear
           wp acorn view:clear
           wp acorn route:clear
           wp acorn config:clear
+          cd ..
 
       - name: Rebuild Bedrock cache
         run: |
+          cd web/
           wp acorn package:discover
           wp acorn view:cache
           wp acorn route:cache
           wp acorn config:cache
           wp acorn optimize
+          cd ..
 
 
       - name: Sync permissions
