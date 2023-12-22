@@ -124,6 +124,9 @@ Config::define('WP_POST_REVISIONS', env('WP_POST_REVISIONS') ?? true);
 // Filesystem method for auto updating
 Config::define('FS_METHOD', env('FS_METHOD', 'direct'));
 
+// Service worker unique cache key
+Config::define('SW_CACHE_KEY', env('SW_CACHE_KEY', 'local'));
+
 /**
  * Debugging Settings
  */
