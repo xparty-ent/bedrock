@@ -1,4 +1,5 @@
 **.log
+.vscode/
 web/app/debug.log
 web/app/cache/*
 web/app/languages/*.json
