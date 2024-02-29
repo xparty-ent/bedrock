@@ -125,9 +125,7 @@ jobs:
           echo "DISALLOW_FILE_MODS='${{ vars.DISALLOW_FILE_MODS }}'" >> .env
 
       - name: Link uploads folder
-        run: |
-          unlink web/app/uploads/
-          ln -s ${{ vars.WP_UPLOADS_FOLDER }} $(pwd)/web/app/uploads
+        run: ln -s ${{ vars.WP_UPLOADS_FOLDER }} $(pwd)/web/app/uploads
 
       - name: Clear Bedrock cache
         run: |
