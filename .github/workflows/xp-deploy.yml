@@ -17,8 +17,6 @@ jobs:
     runs-on: [self-hosted, doctorparts-host]
 
     steps:
-      - name: Remove uploads link
-        run: unlink web/app/uploads/
       - name: Checkout repository
         uses: actions/checkout@v3
         with: 
@@ -128,7 +126,7 @@ jobs:
 
       - name: Link uploads folder
         run: |
-          rm -rf web/app/uploads/
+          unlink web/app/uploads/
           ln -s ${{ vars.WP_UPLOADS_FOLDER }} $(pwd)/web/app/uploads
 
       - name: Clear Bedrock cache
