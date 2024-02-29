@@ -17,6 +17,8 @@ jobs:
     runs-on: [self-hosted, doctorparts-host]
 
     steps:
+      - name: Remove uploads link
+        run: unlink web/app/uploads/
       - name: Checkout repository
         uses: actions/checkout@v3
         with: 
