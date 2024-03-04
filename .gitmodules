@@ -2,3 +2,6 @@
 	path = web/app/themes/xp-theme
 	url = https://github.com/xparty-ent/sage.git
 	branch = main
+[submodule "web/app/mu-plugins/redis-cache"]
+	path = web/app/mu-plugins/redis-cache
+	url = https://github.com/rhubarbgroup/redis-cache
