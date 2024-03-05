@@ -128,6 +128,15 @@ Config::define('FS_METHOD', env('FS_METHOD', 'direct'));
 Config::define('SW_CACHE_KEY', env('SW_CACHE_KEY', 'local'));
 
 /**
+ * Cache Settings
+ */
+Config::define('CACHE_HOST', env('CACHE_HOST', '127.0.0.1'));
+Config::define('CACHE_PORT', env('CACHE_PORT', 6379));
+Config::define('CACHE_PASSWORD', env('CACHE_PASSWORD', ''));
+Config::define('WP_CACHE_KEY_SALT', env('WP_CACHE_KEY_SALT', 'bedrock'));
+Config::define('CACHE_DB', env('CACHE_DB', 0));
+
+/**
  * Debugging Settings
  */
 Config::define('WP_DEBUG_DISPLAY', false);

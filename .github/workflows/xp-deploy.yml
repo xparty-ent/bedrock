@@ -108,6 +108,7 @@ jobs:
           echo "NONCE_SALT='$(tr -dc A-Za-z0-9 </dev/urandom | head -c 64 ; echo '')'" >> .env
           echo "SECURE_AUTH_KEY='$(tr -dc A-Za-z0-9 </dev/urandom | head -c 64 ; echo '')'" >> .env
           echo "SECURE_AUTH_SALT='$(tr -dc A-Za-z0-9 </dev/urandom | head -c 64 ; echo '')'" >> .env
+          echo "WP_CACHE_KEY_SALT='$(tr -dc A-Za-z0-9 </dev/urandom | head -c 64 ; echo '')'" >> .env
       
       - name: Sync .env file
         run: |
@@ -123,6 +124,10 @@ jobs:
           echo "SW_CACHE_KEY='${{ github.sha }}'" >> .env
           echo "FS_METHOD='${{ vars.FS_METHOD }}'" >> .env
           echo "DISALLOW_FILE_MODS='${{ vars.DISALLOW_FILE_MODS }}'" >> .env
+          echo "CACHE_HOST='${{ vars.CACHE_HOST }}'" >> .env
+          echo "CACHE_PORT='${{ vars.CACHE_PORT }}'" >> .env
+          echo "CACHE_PASSWORD='${{ secrets.CACHE_PASSWORD }}'" >> .env
+          echo "CACHE_DB='${{ vars.CACHE_DB }}'" >> .env
 
       - name: Link uploads folder
         run: ln -s ${{ vars.WP_UPLOADS_FOLDER }} $(pwd)/web/app/uploads

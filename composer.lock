@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b1b7f1fafe75db5f827b24cb95cb9e5a",
+    "content-hash": "485e1a75f8021afbeed24cbe0980c4be",
     "packages": [
         {
             "name": "brick/math",
@@ -5788,6 +5788,24 @@
                 }
             ],
             "time": "2022-03-08T17:03:00+00:00"
+        },
+        {
+            "name": "wpackagist-plugin/wp-redis",
+            "version": "1.4.4",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wp-redis/",
+                "reference": "tags/1.4.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-redis.1.4.4.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wp-redis/"
         },
         {
             "name": "wpackagist-theme/twentytwentyfour",
