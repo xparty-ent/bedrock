@@ -150,6 +150,7 @@ jobs:
           wp acorn route:cache
           wp acorn config:cache
           wp acorn optimize
+          wp redis enable
           cd ..
 
 
