@@ -2,3 +2,9 @@
 	path = web/app/themes/xp-theme
 	url = https://github.com/xparty-ent/sage.git
 	branch = main
+[submodule "web/app/mu-plugins/wp-redis"]
+	path = web/app/mu-plugins/wp-redis
+	url = https://github.com/pantheon-systems/wp-redis
+[submodule "web/app/mu-plugins/performance"]
+	path = web/app/mu-plugins/performance
+	url = https://github.com/WordPress/performance
