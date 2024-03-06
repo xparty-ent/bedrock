@@ -132,6 +132,13 @@ jobs:
       - name: Link uploads folder
         run: ln -s ${{ vars.WP_UPLOADS_FOLDER }} $(pwd)/web/app/uploads
 
+      - name: Link performance plugins
+        run: |
+          ln -s $(pwd)/web/app/mu-plugins/performance/plugins/auto-sizes $(pwd)/web/app/mu-plugins/auto-sizes
+          ln -s $(pwd)/web/app/mu-plugins/performance/plugins/dominant-color-images $(pwd)/web/app/mu-plugins/dominant-color-images
+          ln -s $(pwd)/web/app/mu-plugins/performance/plugins/speculation-rules $(pwd)/web/app/mu-plugins/speculation-rules
+          ln -s $(pwd)/web/app/mu-plugins/performance/plugins/webp-uploads $(pwd)/web/app/mu-plugins/webp-uploads
+
       - name: Clear Bedrock cache
         run: |
           cd web/

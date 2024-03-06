@@ -16,3 +16,7 @@ web/wp
 vendor/
 composer.lock
 .env
+web/app/mu-plugins/auto-sizes
+web/app/mu-plugins/dominant-color-images
+web/app/mu-plugins/speculation-rules
+web/app/mu-plugins/webp-uploads
